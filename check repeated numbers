@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define N 5
+
+
+int main()
+{ int x, a[N] ,i , res;
+for(x=0;x<5;x++)
+{
+    printf("please enter value of %d \n",x);
+    scanf("%d",&a[x]);
+}
+
+for(x=N-1;x>=0;x--)
+{
+    for(i=0;i<N;i++)
+    {
+        if(i!=x && a[i]==a[x]){
+            res=1;
+        }
+    }
+}
+
+if(res==1)
+    printf("number is repeated");
+else
+    printf("no repeated values");
+    return 0;
+}
+--------------------------------
+|OOOOOOOOOOOORRRRRRRRRRRRRRRRRR|
+--------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{ int seen[10]={0} , N , rem;
+printf("please enter the number: \n");
+scanf("%d",&N);
+ while(N>0)
+   {
+    rem=N%10;
+ if(seen[rem]== 1)
+    break;
+ seen[rem]=1;
+ N=N/10;
+   }
+ if(N>0)
+    printf("Y");
+ else
+    printf("N");
+
+
+    return 0;
+}
