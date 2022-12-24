@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define N 10
+int main(){
+int a [N] , i;
+for(i=0;i<N;i++)
+{   printf("please enter the valur for index %d \n",i);
+    scanf("%d",&a[i]);
+}
+printf("elements of array are as follow :");
+for(i=N;i>=0;i--)
+{   printf("please enter the valur for index %d \n",a[i]);
+
+}
+return 0;
+}
