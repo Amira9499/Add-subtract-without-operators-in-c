@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{ int a[8]={55,60,9,6,213,7,44,342};
+  int min , max ,i;
+  min=max=a[0];
+  for(i=1;i<8;i++)
+  {
+      if(min<a[i])
+      {
+          min=a[i];
+      }
+      if(max>a[i])
+      {
+          max=a[i];
+      }
+
+  }
+
+  printf("min value is %d max value is %d", min ,max);
+
+    return 0;
+}
+
+
+
+
+--------------
+|OOOOOOOOORRRR|
+--------------
+with pointers
+______________
+#include <stdio.h>
+#include <stdlib.h>
+void minMax(int arr[], int len , int *min , int *max)
+{
+    *min=*max=arr[0];
+    int i;
+    for(i=1;i<len;i++)
+    {
+        if(arr[i] > *max)
+            *max=arr[i];
+        if(arr[i] < *min)
+            *min=arr[i];
+    }
+}
+int main()
+{
+int a[]={23,444,56,789,7,3,1,77,8,343,999,0};
+int min , max;
+int len=sizeof(a)/sizeof(a[0]);
+minMax(a,len,&min,&max);
+printf("min is %d max is %d",min,max);
+    return 0;
+}
+////////////////////
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+
+    int a[]={12,43,54,321,7,1,900};
+    int *i, *j , max=0 , min=a[0] , len , x;
+    i=&max;
+    j=&min;
+    len=sizeof(a)/sizeof(a[0]);
+    for(x=0;x<len;x++)
+    {
+    if(a[x]>max)
+        max=a[x];
+    if(a[x]<min)
+        min=a[x];
+    }
+    printf("max value is %d min value is %d",*i,*j);
+return ;
+}
