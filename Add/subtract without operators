@@ -1,0 +1,15 @@
+int add( int , int);
+int main()
+{ int l , m , s;
+printf("please enter 1st no.:\n");
+scanf("%d",&l);
+printf("please enter 2nd no.:\n");
+scanf("%d",&m);
+s=add(l,m);
+printf("%d",s);
+return 0;
+}
+int add ( int a , int b)
+{
+    return a+b;
+}
