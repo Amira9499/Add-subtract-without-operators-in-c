@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[5]={1,2,3,4,5};
+    int (*p)[5]=&a;
+    printf("%d",p);
+    return 0;
+}
+printing value of 1st element only
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[5]={1,2,3,4,5};
+    int (*p)[5]=&a;
+    printf("%d",**p);
+    return 0;
+}
